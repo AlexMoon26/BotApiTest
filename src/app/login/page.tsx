@@ -16,7 +16,7 @@ export default function LoginPage() {
 
       try {
         const authResponse = await fetch(
-          "http://26.126.121.104:5000/auth/telegram-auth",
+          "https://botapitest-server.onrender.com/auth/telegram-auth",
           {
             method: "POST",
             headers: {
