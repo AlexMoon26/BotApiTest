@@ -6,4 +6,15 @@ const nextConfig: NextConfig = {
   }
 };
 
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'https://botapitest-server.onrender.com/:path*',
+      },
+    ];
+  },
+};
+
 export default nextConfig;
