@@ -1,12 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  images: {
-    domains: ["t.me"]
-  }
-};
 
 module.exports = {
+  images: {
+    remotePatterns: [new URL('https://t.me/**')],
+  },
   async rewrites() {
     return [
       {
@@ -16,5 +12,3 @@ module.exports = {
     ];
   },
 };
-
-export default nextConfig;
